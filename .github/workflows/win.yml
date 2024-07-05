@@ -28,5 +28,9 @@ jobs:
     - name: build and push
       if: ${{ github.actor == github.repository_owner }}
       run: |
-        docker build -t $REGISTRY/$PROJECT/win:latest .
-        docker push $REGISTRY/$PROJECT/win:latest
+        echo "REGISTRY=$REGISTRY"
+        echo "PROJECT=$PROJECT"
+        docker build -t ghcr.io/erezgeva/win:latest .
+        docker push ghcr.io/erezgeva/win:latest
+#       docker build -t $REGISTRY/$PROJECT/win:latest .
+#       docker push $REGISTRY/$PROJECT/win:latest
