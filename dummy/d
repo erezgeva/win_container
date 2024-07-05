@@ -1,0 +1,2 @@
+docker build -t ghcr.io/erezgeva/win .
+docker push ghcr.io/erezgeva/win
